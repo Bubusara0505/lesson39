@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Регистрация</title>
+  </head>
+  <body>
+
+<form id="registration-form">
+    <div>
+        <label for="fullname">ФИО:</label>
+        <input type="text" id="fullname" name="fullname">
+        <span class="error-message" id="fullname-error"></span>
+    </div>
+    <div>
+        <label for="contact">Контакт (email или телефон):</label>
+        <input type="text" id="contact" name="contact" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Введите email адрес или телефон в формате +996 111 22-33-44">
+        <span class="error-message" id="contact-error"></span>
+    </div>
+    <div>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password">
+        <span class="error-message" id="password-error"></span>
+    </div>
+    <button type="submit">Отправить</button>
+</form>
+
+<div id="success-message" style="display: none;">
+</div>
+
+<script src="./index.js"></script>
+
+</body>
+</html>
